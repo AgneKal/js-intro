@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "boolean": "node --watch ./data-types/boolean.js",
     "methods:string": "node --watch ./methods/string.js",
     "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
