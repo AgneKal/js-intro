@@ -37,7 +37,7 @@ const arYraDviKomandos = true;
 const arVykstaVarzybos = arDiena && arYraDviKomandos;
 console.log('Varzybos:', arVykstaVarzybos);
 
-// KERMOSIUS
+// KERMOŠIUS
 // - vaikas norėtų gaidelio
 // - vaikas norėtų lazdelės
 // - vaikas norėtų grybuko
