@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ternary": "node --watch ./compare/ternary.js",
+    "if": "node --watch ./compare/if.js",
     "boolean": "node --watch ./data-types/boolean.js",
     "methods:string": "node --watch ./methods/string.js",
     "string": "node --watch ./data-types/string.js",
