@@ -280,9 +280,26 @@ console.log(`--- ${++number} --- `);
 // e.	- 50 … 50
 // f.	- 70 … 30
 
+const minSkc = -70;
+const maxSkc = 30;
+let suma = 0;
+
+for (let sk = minSkc; sk <= maxSkc; sk++) {
+    suma = suma + sk;
+}
+console.log(suma);
+
 console.log(`--- ${++number} --- `);
 // 2.	panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
 // a.pvz.: “abcdef” -> “fedcba”
+
+const raides = 'abcdef';
+let raides2 = '';
+
+for (let i = raides.length - 1; i >= 0; i--) {
+    raides2 = raides2 + raides[i];
+}
+console.log(raides2);
 
 console.log(`--- ${++number} --- `);
 // 3.	Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
