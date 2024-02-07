@@ -17,11 +17,24 @@ Būsimos temos:
     - skaičiai
     - tekstas
     - loginės reikšmės
+    - undefined
     - sąrašas
     - objektas
 - sąlygos (if)
+    - if
+    - ternary
+    - switch
 - ciklai (for)
+    - for
+    - while
+    - do- while
+    - for-of
+    - for-in
+    - kiti cikliski metodai
 - funkcijos
+    - function
+    - arrow function
+    - class
 - įvykiai (event listeners)
 
 */
