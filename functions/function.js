@@ -1,6 +1,13 @@
 /*
 FUNCTION - funkcija
 Perpanaudojamas logikos blokas
+
+function example (){
+    // 1. paramnetrų validavimas;
+    // 2. logika
+    // 3. rezultato validavimas
+    // 4. rezultato grąžinimas
+}
 */
 // DRY - 
 
@@ -116,11 +123,26 @@ console.clear();
 function price(amount) {
     if (amount < 100) {
         return amount + ' Eur';
-    } else if (amount >= 100) {
+    } else {
         return amount / 2 + ' Eur';
     }
-    return ':P'
 }
+
+function betterPrice(amount) {
+    //validacija
+    //logika
+    let result = '';
+
+    if (amount < 100) {
+        result = amount + ' Eur'
+    } else {
+        result = (amount * 0.5) + ' Eur';
+    }
+    //rezultato validacija
+    //rezultato grazinimas
+    return result
+}
+
 
 console.log(price(0), '->', '0 Eur');
 console.log(price(10), '->', '10 Eur');
@@ -131,4 +153,94 @@ console.log(price(100), '->', '50 Eur');
 console.log(price(102), '->', '51 Eur');
 console.log(price(200), '->', '100 Eur');
 
+console.log(price(-200), '->', 'ERROR');
+console.log(price(Infinity), '->', 'ERROR');
+console.log(price(-Infinity), '->', 'ERROR');
+console.log(price(NaN), '->', 'ERROR');
+console.log(price(true), '->', 'ERROR');
+console.log(price('dasfd'), '->', 'ERROR');
+console.log(price(undefined), '->', 'ERROR');
+console.log(price(), '->', 'ERROR');
+console.log(price(price), '->', 'ERROR');
 
+console.clear();
+
+function betterPrice(amount) {
+    //validacija
+    if (typeof amount !== 'number') {
+        return 'ERROR: duok skaiciu';
+    }
+
+    if (amount < 0) {
+        return 'ERROR: duok teigiama skaiciu';
+    }
+
+    if (amount === Infinity) {
+        return 'ERROR: duok skaiciu';
+    }
+
+    if (isNaN(amount)) {
+        return 'ERROR: duok normalu skaiciu';
+    }
+
+    //logika
+    let result = '';
+
+    if (amount < 100) {
+        result = amount + ' Eur'
+    } else {
+        result = (amount * 0.5) + ' Eur';
+    }
+    //rezultato validacija
+    if (result === '') {
+        return 'ERROR: kazkas negerai su logika'
+    }
+
+    //rezultato grazinimas
+    return result
+}
+
+console.log(betterPrice(0), '->', '0 Eur');
+console.log(betterPrice(10), '->', '10 Eur');
+console.log(betterPrice(50), '->', '50 Eur');
+console.log(betterPrice(90), '->', '90 Eur');
+console.log(betterPrice(99), '->', '99 Eur');
+console.log(betterPrice(100), '->', '50 Eur');
+console.log(betterPrice(102), '->', '51 Eur');
+console.log(betterPrice(200), '->', '100 Eur');
+
+console.log(betterPrice(-200), '->', 'ERROR');
+console.log(betterPrice(Infinity), '->', 'ERROR');
+console.log(betterPrice(-Infinity), '->', 'ERROR');
+console.log(betterPrice(NaN), '->', 'ERROR');
+
+console.log(betterPrice(true), '->', 'ERROR');
+console.log(betterPrice('dasfd'), '->', 'ERROR');
+console.log(betterPrice(undefined), '->', 'ERROR');
+console.log(betterPrice(), '->', 'ERROR');
+console.log(betterPrice(betterPrice), '->', 'ERROR');
+
+
+if (NaN === NaN) {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
+
+if (isNaN(NaN)) {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
+
+if (isFinite(NaN)) {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
+
+if ('' + NaN === 'NaN') {
+    console.log('taip');
+} else {
+    console.log('ne');
+}
