@@ -152,19 +152,22 @@ console.log(price(99), '->', '99 Eur');
 console.log(price(100), '->', '50 Eur');
 console.log(price(102), '->', '51 Eur');
 console.log(price(200), '->', '100 Eur');
+console.log(price(201), '->', '100 Eur');
 
-console.log(price(-200), '->', 'ERROR');
-console.log(price(Infinity), '->', 'ERROR');
-console.log(price(-Infinity), '->', 'ERROR');
-console.log(price(NaN), '->', 'ERROR');
 console.log(price(true), '->', 'ERROR');
 console.log(price('dasfd'), '->', 'ERROR');
 console.log(price(undefined), '->', 'ERROR');
 console.log(price(), '->', 'ERROR');
 console.log(price(price), '->', 'ERROR');
 
+console.log(price(-200), '->', 'ERROR');
+console.log(price(Infinity), '->', 'ERROR');
+console.log(price(-Infinity), '->', 'ERROR');
+console.log(price(NaN), '->', 'ERROR');
+
 console.clear();
 
+//funkcijos struktūra
 function betterPrice(amount) {
     //validacija
     if (typeof amount !== 'number') {
@@ -191,6 +194,7 @@ function betterPrice(amount) {
     } else {
         result = (amount * 0.5) + ' Eur';
     }
+
     //rezultato validacija
     if (result === '') {
         return 'ERROR: kazkas negerai su logika'
@@ -220,27 +224,29 @@ console.log(betterPrice(undefined), '->', 'ERROR');
 console.log(betterPrice(), '->', 'ERROR');
 console.log(betterPrice(betterPrice), '->', 'ERROR');
 
+// eliminuoti NaN
+// if (isNaN(NaN)) {
+//     console.log('taip');
+// } else {
+//     console.log('ne');
+// }
 
-if (NaN === NaN) {
-    console.log('taip');
-} else {
-    console.log('ne');
+// if (isFinite(NaN)) {
+//     console.log('taip');
+// } else {
+//     console.log('ne');
+// }
+
+// if ('' + NaN === 'NaN') {
+//     console.log('taip');
+// } else {
+//     console.log('ne');
+// }
+
+function sum(a, b) {
+    return a + b;
 }
 
-if (isNaN(NaN)) {
-    console.log('taip');
-} else {
-    console.log('ne');
-}
-
-if (isFinite(NaN)) {
-    console.log('taip');
-} else {
-    console.log('ne');
-}
-
-if ('' + NaN === 'NaN') {
-    console.log('taip');
-} else {
-    console.log('ne');
-}
+sum(7, 5)
+console.log(sum(7, 5));
+console.log(sum('asd', true));

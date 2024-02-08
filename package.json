@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "number-sum": "node --watch ./exercises/number-sum.js",
+    "for": "node --watch ./loops/for.js",
+    "array": "node --watch ./data-types/array.js",
     "typeof": "node --watch ./compare/typeof.js",
     "function": "node --watch ./functions/function.js",
     "jsmini": "node --watch ./homework/jsmini.js",

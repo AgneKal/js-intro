@@ -33,27 +33,27 @@ console.log(`--- ${++number} ---`);
 // 3.	Sukurti 3 sąrašo tipo kintamuosius su penkiomis skaičių tipo reikšmėmis
 // a.Po kiekvieno jų inicijavimo, išvesti į console
 
-const seka1 = [1, 2, 3, 4, 5];
-console.log(seka1);
+const masyvas1 = [1, 2, 3, 4, 5];
+console.log(masyvas1);
 
-const seka2 = [1.9, 5.2, 2.7, 15.6, 17.2];
-console.log(seka2);
+const masyvas2 = [1.9, 5.2, 2.7, 15.6, 17.2];
+console.log(masyvas2);
 
-const seka3 = [1, 9.5, 4.3, 18, 6.1];
-console.log(seka3);
+const masyvas3 = [1, 9.5, 4.3, 18, 6.1];
+console.log(masyvas3);
 
 console.log(`--- ${++number} --- `);
 // 4.	Sukurti 3 sąrašo tipo kintamuosius su penkiomis teksto tipo reikšmėmis
 // a.Po kiekvieno jų inicijavimo, išvesti į console
 
-const seka4 = ['Jurgis', 'Antanas', 'Aloizas', 'Martynas', 'Petras'];
-console.log(seka4);
+const masyvas4 = ['Jurgis', 'Antanas', 'Aloizas', 'Martynas', 'Petras'];
+console.log(masyvas4);
 
-const seka5 = ['Phoebe', 'Monica', 'Rachel', 'Janice', 'Carol'];
-console.log(seka5);
+const masyvas5 = ['Phoebe', 'Monica', 'Rachel', 'Janice', 'Carol'];
+console.log(masyvas5);
 
-const seka6 = ['pamatai', 'sienos', 'langas', 'durys', 'stogas'];
-console.log(seka6);
+const masyvas6 = ['pamatai', 'sienos', 'langas', 'durys', 'stogas'];
+console.log(masyvas6);
 
 console.log('VEIKSMAI SU KINTAMAISIAIS');
 number = 0;
@@ -80,22 +80,22 @@ console.log(`--- ${++number} --- `);
 // a.	1 - 2 + 3 - 4 + 5
 // b.Rezultatą išvesti į console
 
-const verte1 = seka1[0] - seka1[1] + seka1[2] - seka1[3] + seka1[4];
+const verte1 = masyvas1[0] - masyvas1[1] + masyvas1[2] - masyvas1[3] + masyvas1[4];
 console.log(verte1);
 
-const verte2 = seka2[0] - seka2[1] + seka2[2] - seka2[3] + seka2[4];
+const verte2 = masyvas2[0] - masyvas2[1] + masyvas2[2] - masyvas2[3] + masyvas2[4];
 console.log(verte2);
 
-const verte3 = seka3[0] - seka3[1] + seka3[2] - seka3[3] + seka3[4];
+const verte3 = masyvas3[0] - masyvas3[1] + masyvas3[2] - masyvas3[3] + masyvas3[4];
 console.log(verte3);
 
 console.log(`--- ${++number} --- `);
 // 4.	Sujungti sąrašų vertes, kurių tipas yra tekstai, nuo sąrašo galo iki pradžios taip, jog tarp jų būtų kablelis ir tarpas
 
-const verte41 = `${seka4[4]}, ${seka4[3]}, ${seka4[2]}, ${seka4[1]}, ${seka4[0]}`;
+const verte41 = `${masyvas4[4]}, ${masyvas4[3]}, ${masyvas4[2]}, ${masyvas4[1]}, ${masyvas4[0]}`;
 console.log(verte41);
 
-const verte42 = seka4[4] + ', ' + seka4[3] + ', ' + seka4[2] + ', ' + seka4[1] + ', ' + seka4[0];
+const verte42 = masyvas4[4] + ', ' + masyvas4[3] + ', ' + masyvas4[2] + ', ' + masyvas4[1] + ', ' + masyvas4[0];
 console.log(verte42);
 
 console.log(`KINTAMŲJŲ PALYGINIMAS`);
@@ -325,6 +325,11 @@ console.log(`--- ${++number} --- `);
 // i.console.log(tusciaFunkcija());
 // ii.rezultatas: false
 
+function tusciaFunkcija() {
+    return false;
+}
+console.log(tusciaFunkcija());
+
 console.log(`--- ${++number} --- `);
 // 2.	Funkcija pavadinimu “daugyba”:
 // a.priima du skaičiaus tipo kintamuosius
@@ -427,3 +432,4 @@ console.log(`--- ${++number} --- `);
 // d.grąžinti suskaičiuotą reikšmę
 // e.TESTAI:
 // i.sugalvoti bent 5 testus, kurie bendrai iš esmės patvirtintu gerą funkcijos veikimą
+
