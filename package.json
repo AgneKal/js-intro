@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "object": "node --watch ./data-types/object.js",
+    "reverse": "node --watch ./exercises/reverse.js",
     "number-sum": "node --watch ./exercises/number-sum.js",
     "for": "node --watch ./loops/for.js",
     "array": "node --watch ./data-types/array.js",
