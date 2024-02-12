@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "for-in": "node --watch ./loops/for-in.js",
+    "while": "node --watch ./loops/while.js",
+    "for-of": "node --watch ./loops/for-of.js",
     "object": "node --watch ./data-types/object.js",
     "reverse": "node --watch ./exercises/reverse.js",
     "number-sum": "node --watch ./exercises/number-sum.js",
