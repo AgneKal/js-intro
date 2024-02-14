@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "methods:string2": "node --watch ./methods/string2.js",
+    "methods:string": "node --watch ./methods/string.js",
     "remove-negative": "node --watch ./exercises/remove-negative.js",
     "for-in": "node --watch ./loops/for-in.js",
     "while": "node --watch ./loops/while.js",
@@ -19,7 +21,6 @@
     "ternary": "node --watch ./compare/ternary.js",
     "if": "node --watch ./compare/if.js",
     "boolean": "node --watch ./data-types/boolean.js",
-    "methods:string": "node --watch ./methods/string.js",
     "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
     "test": "echo \"Error: no test specified\" && exit 1",

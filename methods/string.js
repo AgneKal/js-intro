@@ -68,4 +68,3 @@ console.log(inicialai3);
 
 const inicialai4 = `Asmens ${name4} ${surname4} inicialai yra ${name4[0]}. ${surname4[0]}.`
 console.log(inicialai4);
-
