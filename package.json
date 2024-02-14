@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "remove-negative": "node --watch ./exercises/remove-negative.js",
     "for-in": "node --watch ./loops/for-in.js",
     "while": "node --watch ./loops/while.js",
     "for-of": "node --watch ./loops/for-of.js",
