@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "methods:array": "node --watch ./methods/array.js",
     "methods:string2": "node --watch ./methods/string2.js",
     "methods:string": "node --watch ./methods/string.js",
     "remove-negative": "node --watch ./exercises/remove-negative.js",
