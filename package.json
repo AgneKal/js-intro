@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sort": "node --watch ./methods/sort.js",
+    "filter": "node --watch ./methods/filter.js",
+    "map": "node --watch ./methods/map.js",
+    "hof": "node --watch ./functions/hof.js",
+    "arrow": "node --watch ./functions/arrow.js",
     "name-format": "node --watch ./exercises/name-format.js",
     "methodsND": "node --watch ./homework/methodsND.js",
     "methods:array": "node --watch ./methods/array.js",
