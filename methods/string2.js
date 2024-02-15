@@ -184,4 +184,4 @@ console.log(`"${'v  a  s  a  r  a'.trim()}"`);
 console.log(`"${'v   a   s   a   r   a'.trim()}"`);
 console.log(`"${'     vasara'.trim()}"`);
 console.log(`"${'vasara     '.trim()}"`);
-console.log(`"${'     vasara     '.trim()}"`);
+console.log(`"${'vasara     '.trim()}"`);

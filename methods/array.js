@@ -178,4 +178,3 @@ console.log(ona.slice(1, -1));
 
 
 
-
