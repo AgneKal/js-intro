@@ -38,7 +38,6 @@ console.log(rightName('oNA'));
 console.log(rightName('PeTrAs'));
 console.log(rightName('Maryte'));
 
-
 //UZD 2
 // Duodamas vardas ir pavardė.
 // Grąžinti trumpinį (inicialai).
