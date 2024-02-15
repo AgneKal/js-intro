@@ -175,6 +175,6 @@ console.log(ona.slice(1, -1));
 
 // pvz.: Chuck Norris -> C. N.
 
-
+console.clear();
 
 
