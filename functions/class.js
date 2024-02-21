@@ -90,7 +90,7 @@ class Parrot {
         this.name = name;
         this.color = color;
         this.age = age;
-        this.isSleeping = true;
+        this.isSleeping = false;
     }
 
     wakeUp() {
@@ -110,16 +110,25 @@ class Parrot {
             return `Shhh... ${this.name} is sleeping.`
         }
     }
+
     repeatWord(phrase) {
         const word = phrase.split(' ');
         return this.isSleeping === false ? word.length === 1 ? word[0] : 'Ka?' : `Shhh... ${this.name} is sleeping.`
     }
+
     needToTalk(phrase) {
         this.wakeUp();
         return this.repeatWord(phrase);
     }
-
 }
 
 const firstParrot = new Parrot('Alice', 'green', '5');
-console.log(firstParrot.needToTalk('Labas rytas'));
+const secondParrot = new Parrot('Kevin', 'grey', '3');
+const thirdParrot = new Parrot('Baiba', 'white', '8');
+
+secondParrot.wakeUp();
+thirdParrot.putToSleep();
+
+console.log(firstParrot.repeatWord('Labas'));
+console.log(secondParrot.repeatWord('Labas rytas'));
+console.log(thirdParrot.repeatWord('Labas rytas'));
