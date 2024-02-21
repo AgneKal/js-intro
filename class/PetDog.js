@@ -1,12 +1,11 @@
 import Pet from './Pet.js'
 
-
 class Dog extends Pet {
     constructor(name, color, sound) {
         super(name, color);
-        this.breed = 'dog';
+        this.type = 'dog';
         this.sound = this.doubleSound(sound);
-        this.emoji = '🐕🐕';
+        this.emoji = '🐕';
     }
     doubleSound(sound) {
         const str = `${sound} ${sound}`
@@ -16,7 +15,3 @@ class Dog extends Pet {
 
 export default Dog;
 
-// export default class Dog {
-// }
-// export default Dog;
-// export default {Dog};
