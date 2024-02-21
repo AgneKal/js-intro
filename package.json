@@ -2,8 +2,10 @@
   "name": "js-intro",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "animals": "node --watch ./class/index.js",
     "class": "node --watch ./functions/class.js",
     "math": "node --watch ./methods/math.js",
     "spread": "node --watch ./methods/spread.js",

@@ -101,19 +101,21 @@ class Parrot {
         this.isSleeping = true;
     }
 
+    // teisingiau
     repeatWord1(phrase) {
         if (this.isSleeping === false) {
-            let word = phrase.split(' ');
-            const answer = word.length === 1 ? word[0] : 'Ka?';
+            const word = phrase.split(' ');
+            const answer = word.length === 1 ? word[0] : 'What?';
             return answer;
         } else {
             return `Shhh... ${this.name} is sleeping.`
         }
     }
 
+    // trumpiau
     repeatWord(phrase) {
         const word = phrase.split(' ');
-        return this.isSleeping === false ? word.length === 1 ? word[0] : 'Ka?' : `Shhh... ${this.name} is sleeping.`
+        return this.isSleeping === false ? word.length === 1 ? word[0] : 'What?' : `Shhh... ${this.name} is sleeping.`
     }
 
     needToTalk(phrase) {
@@ -129,6 +131,6 @@ const thirdParrot = new Parrot('Baiba', 'white', '8');
 secondParrot.wakeUp();
 thirdParrot.putToSleep();
 
-console.log(firstParrot.repeatWord('Labas'));
-console.log(secondParrot.repeatWord('Labas rytas'));
-console.log(thirdParrot.repeatWord('Labas rytas'));
+console.log(firstParrot.repeatWord('Hi'));
+console.log(secondParrot.repeatWord('Good morning!'));
+console.log(thirdParrot.repeatWord('Good morning!'));
