@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "class": "node --watch ./functions/class.js",
+    "math": "node --watch ./methods/math.js",
+    "spread": "node --watch ./methods/spread.js",
+    "memory": "node --watch ./exercises/memory.js",
     "sort": "node --watch ./methods/sort.js",
     "filter": "node --watch ./methods/filter.js",
     "map": "node --watch ./methods/map.js",

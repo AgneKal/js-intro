@@ -37,3 +37,45 @@ console.log(students2);
 // Reikia apskaiciuoti kiekvieno studento didziausia pazymi ir tai prideti kaip nauja studento objekto rakta (maxMark).
 // Reikia sudaryti studentu sarasa (pilni objektai), kuriu pazymiu vidurkis yra didesnis uz 5.
 // Reikia sudaryti studentu vardu sarasa, kuriu pazymiu vidurkis yra didesnis uz 5.
+
+// Reikia apskaiciuoti kiekvieno studento pazymiu kieki ir tai prideti kaip nauja studento objekto rakta (marksCount).
+
+for (const student of students) {
+    student.marksCount = student.marks.length;
+}
+
+
+// Reikia apskaiciuoti kiekvieno studento pazymiu vidurki ir tai prideti kaip nauja studento objekto rakta (marksAverage).
+
+for (const student of students) {
+    let sum = 0;
+
+    for (const mark of student.marks) {
+        sum += mark;
+    }
+
+    student.marksAverage = sum / student.marks.length;
+}
+
+// Reikia rasti kiekvieno studento maziausia pazymi ir tai prideti kaip nauja studento objekto rakta (minMark).
+
+for (const student of students) {
+    const marksCopy = [];
+    for (const mark of student.marks) {
+        marksCopy.push(mark);
+    }
+
+    marksCopy.sort((a, b) => a - b);
+    student.minMark = marksCopy[0];
+}
+
+
+// Reikia rasti kiekvieno studento didziausia pazymi ir tai prideti kaip nauja studento objekto rakta (maxMark).
+
+for (const student of students) {
+    student.maxMark = Math.max(...student.marks);
+}
+console.log(students[0]);
+
+// Reikia sudaryti studentu sarasa (pilni objektai), kuriu pazymiu vidurkis yra didesnis uz 5.
+// Reikia sudaryti studentu vardu sarasa, kuriu pazymiu vidurkis yra didesnis uz 5.
