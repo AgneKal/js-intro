@@ -5,6 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "biggest": "node --watch ./exercises/biggest.js",
+    "sum-interval": "node --watch ./exercises/sum-interval.js",
+    "number-name": "node --watch ./exercises/number-name.js",
+    "codewars": "node --watch ./homework/codewars.js",
     "animals": "node --watch ./class/index.js",
     "class": "node --watch ./functions/class.js",
     "math": "node --watch ./methods/math.js",

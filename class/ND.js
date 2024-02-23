@@ -30,4 +30,10 @@ Animal (name, color), intro():
         - Dophin (name, color), intro(), swim(), stopSwim(), jumpFromWater()
             - jumpCount
             - jumpFromWater() Delfinas issoko is vandens {{jumpCount}}-a karta
+
+Papildomi reikalavimai:
+- naminiai gyvunai {{sound}} kartoja 2 kartus
+- vandens gyvunai {{sound}} kartoja 0 kartus
+    - delfinas: {{sound}} kartoja 5 kartus
+- pauksciai {{sound}} kartoja 3 kartus 
 */
