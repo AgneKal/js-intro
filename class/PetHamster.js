@@ -4,7 +4,7 @@ class Hamster extends Pet {
     constructor(name, color) {
         super(name, color);
         this.type = 'hamster';
-        this.sound = 'Niom niom';
+        this.sound = 'niom ';
         this.emoji = '🐹';
         this.foodAmount = 0;
     }

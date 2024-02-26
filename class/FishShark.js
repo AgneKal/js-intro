@@ -4,7 +4,7 @@ class Shark extends Fish {
     constructor(name, color) {
         super(name, color);
         this.type = 'shark';
-        this.sound = 'Roar roar';
+        this.sound = 'roar ';
         this.emoji = '🦈';
         this.isEatHuman = false;
     }

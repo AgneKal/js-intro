@@ -4,7 +4,7 @@ class Parrot extends Bird {
     constructor(name, color) {
         super(name, color);
         this.type = 'parrot'
-        this.sound = 'Prreprreprre prreprreprre';
+        this.sound = 'prreprreprre ';
         this.emoji = '🦜';
         this.history = [];
     }

@@ -6,7 +6,7 @@ class Goldenfish extends Fish {
         this.wishLimit = wishLimit;
         this.restWishes = '0';
         this.type = 'goldenfish'
-        this.sound = 'Gulp gulp';
+        this.sound = 'gulp ';
         this.emoji = '🐡';
         this.isMagic = wishLimit > 0;
     }
@@ -26,8 +26,5 @@ class Goldenfish extends Fish {
     }
 
 }
-// - jeigu liko neispildytu noru: Stai tavo noras: { { myWish } }
-// - jeigu neliko neispildytu noru: Daugiau noru ispildyti nebegaliu: (
-// - jeigu is viso nepildo noru: As nepildau noru / Wrong fish 👀
 
 export default Goldenfish;

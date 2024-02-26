@@ -4,7 +4,7 @@ class Stork extends Bird {
     constructor(name, color) {
         super(name, color);
         this.type = 'stork';
-        this.sound = 'Clatt clatt';
+        this.sound = 'clatt ';
         this.emoji = '🦢';
         this.babiesCount = 0;
     }

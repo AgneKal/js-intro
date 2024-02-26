@@ -4,10 +4,11 @@ class Dolphin extends Fish {
     constructor(name, color) {
         super(name, color);
         this.type = 'dolphin'
-        this.sound = 'Squeak squeak';
+        this.sound = 'squeak ';
         this.emoji = '🐬';
         this.isJumping = false;
         this.jumpCount = 0;
+        this.repeat = 5;
     }
 
     jumpFromWater() {

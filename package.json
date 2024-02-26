@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "friday": "node --watch ./exercises/friday-challenge.js",
     "biggest": "node --watch ./exercises/biggest.js",
     "sum-interval": "node --watch ./exercises/sum-interval.js",
     "number-name": "node --watch ./exercises/number-name.js",

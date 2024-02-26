@@ -5,6 +5,7 @@ class Fish extends Animal {
         super(name, color)
         this.group = 'fish';
         this.isSwim = 'false';
+        this.repeat = 0;
     }
     swim() {
         this.isSwim = 'true';
