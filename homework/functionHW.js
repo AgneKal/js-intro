@@ -190,25 +190,11 @@ console.log(countSymbol('makaliuzas', 'a'));
 // Veiksmingumas: stenkitės optimizuoti funkciją taip, kad ji veiktų kuo efektyviau su dideliais masyvais.
 // Unikalumas: grąžinamame masyve neturėtų būti pasikartojančių elementų.
 
-// function noRepeat(arr, arr1) {
-//     const longArr = arr.length >= arr1.length ? arr : arr1;
-//     const shortArr = arr.length < arr1.length ? arr : arr1;
-//     const newArr = [];
-//     for (let i = 0; i < longArr.length; i++) {
-//         if (longArr.some(longArr[i] => shortArr.includes(longArr[i]))) {
-//             newArr.push(longArr[i])
-//         }
-//     }
-//     return newArr;
-// }
-
-
-// console.log(noRepeat([1, 3, 5, 8, 10], [12, 5, 66, 3]));
-
 
 function onlyRepeat(arr1, arr2) {
-    return arr1.filter(element => arr2.includes(element))
+    const newArr = arr1.filter(element => arr2.includes(element));
+    return [... new Set(newArr)]
 }
 
 
-console.log(onlyRepeat([1, 3, 5, 8, 10, 9], [12, 5, 66, 3]));
+console.log(onlyRepeat([1, 3, 5, 5, 8, 10, 9], [12, 5, 66, 3]));
