@@ -874,3 +874,106 @@ console.log(flickSwitch(["flick", "flick", "flick", "flick", "flick"]));
 
 console.clear();
 
+function expressionMatter(a, b, c) {
+    const highest = [];
+    highest.push(a + b + c);
+    highest.push(a * b * c);
+    highest.push((a + b) * c);
+    highest.push(a + b * c);
+    highest.push(a * (b + c));
+    highest.push(a * b + c);
+    return highest.sort((a, b) => b - a)[0];
+}
+
+console.log(expressionMatter(5, 1, 3));
+
+console.clear();
+
+function isOpposite(s1, s2) {
+    if ((s1 || s2) === '') {
+        return false
+    }
+    if (s1.length !== s2.length) {
+        return false
+    }
+    let result = 0;
+    for (let i = 0; i < s1.length; i++) {
+        if ((s1[i] === s1[i].toLowerCase() && s2[i] === s2[i].toUpperCase()) || (s1[i] === s1[i].toUpperCase() && s2[i] === s2[i].toLowerCase())) {
+            result;
+        } else {
+            result++
+        }
+    }
+    return result > 0 ? false : true
+}
+
+console.log(isOpposite("ab", "AB"), 'TRUE');
+console.log(isOpposite("aB", "aB"), 'FALSE');
+console.log(isOpposite("AB", "Ab"), 'FALSE');
+console.log(isOpposite("", ""), 'FALSE');
+console.log(isOpposite("aBcde", "AbCD"), 'FALSE');
+
+console.clear();
+
+function roundIt(n) {
+    const sp = (n.toString().split('.'));
+    if (sp[0].length < sp[1].length) {
+        return Math.ceil(n)
+    }
+    if (sp[0].length > sp[1].length) {
+        return Math.floor(n)
+    }
+    if (sp[0].length === sp[1].length) {
+        return Math.round(n)
+    }
+}
+
+console.log(roundIt(3.45), 4); // Math.ceil()
+console.log(roundIt(34.5), 34); // Math.floor()
+console.log(roundIt(34.56), 35); // Math.round()
+
+console.clear();
+
+// function gimmeTheLetters(sp) {
+//     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//     const alphabet2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//     const spNew = sp.split('-');
+//     const firstLetter = alphabet.indexOf(spNew[0]);
+//     const firstLetter2 = alphabet2.indexOf(spNew[0]);
+
+
+//     const lastLetter = alphabet.indexOf(spNew[1]);
+//     const lastLetter2 = alphabet2.indexOf(spNew[1]);
+
+//     let result = '';
+//     if ((spNew[0]) == spNew[0].toLowerCase()) {
+//         for (let i = firstLetter; i <= lastLetter; i++) {
+//             result += alphabet[i];
+
+//         }
+//     }
+//     if ((spNew[0]) == spNew[0].toUpperCase()) {
+//         for (let i = firstLetter2; i <= lastLetter2; i++) {
+//             result += alphabet2[i];
+
+//         }
+//     }
+//     return result;
+// }
+
+function gimmeTheLetters(sp) {
+    const [first, last] = sp.split('-')
+    const firstLetterCode = first.charCodeAt(0);
+    const lastLetterCode = last.charCodeAt(0)
+    let result = '';
+    for (let i = firstLetterCode; i <= lastLetterCode; i++) {
+        result += String.fromCharCode(i);
+    }
+    return result;
+}
+
+console.log(gimmeTheLetters('a-b'), 'ab', `'a-b'`)
+console.log(gimmeTheLetters('y-z'), 'yz', `'y-z'`)
+console.log(gimmeTheLetters('H-I'), 'HI', `'H-I'`)
+console.log(gimmeTheLetters('a-z'), 'abcdefghijklmnopqrstuvwxyz', `'a-z'`)
+console.log(gimmeTheLetters('A-Z'), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', `'A-Z'`)

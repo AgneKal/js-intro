@@ -85,7 +85,7 @@ console.log(even(5));
 // 11.  Parašykite funkciją, kuri priima tekstą ir dvi eilutes: pakeistiną simbolį ir pakeitimo simbolį.Funkcija grąžina naują tekstą su pakeistais simboliais.
 
 function replace(str, a, b) {
-    return str.replaceAll(a, b)
+    return str.toLowerCase().replaceAll(a, b)
 }
 
 console.log(replace('mama', 'a', 'b'));
@@ -196,5 +196,11 @@ function onlyRepeat(arr1, arr2) {
     return [... new Set(newArr)]
 }
 
-
 console.log(onlyRepeat([1, 3, 5, 5, 8, 10, 9], [12, 5, 66, 3]));
+
+function onlyRepeat1(a, b, c) {
+    const duplicates = a.filter(i => b.includes(i) && c.includes(i));
+    return duplicates;
+}
+
+console.log(onlyRepeat1([1, 3, 5, 5, 8, 10, 9], [12, 5, 66, 3], [34, 5, 55, 28, 3, 98]));
