@@ -144,3 +144,6 @@ function tailAndHead(arr) {
 // }
 
 console.log(tailAndHead([123, 456, 789, 12, 34, 56, 78]), 532350);
+
+console.clear();
+
