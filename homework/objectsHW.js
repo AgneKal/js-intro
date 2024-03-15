@@ -40,6 +40,7 @@ const favoriteBook2 = {
     published: 1997
 }
 
+
 function makeCopy(obj) {
     const copyOfObj = {};
     for (let key in obj) {
