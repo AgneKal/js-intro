@@ -35,6 +35,18 @@ for (let i = 0; i < mas2.length; i++) {
 
 console.log(newMas2);
 
+function dublicateRemove(arr) {
+    const newArr = [];
+    for (let n of arr) {
+        if (!newArr.includes(n)) {
+            newArr.push(n)
+        }
+    }
+    return newArr;
+}
+
+console.log(dublicateRemove(mas2));
+
 // 3. Objekto Gylis: Parašykite funkciją, kuri naudodama for in ciklą ir rekursiją, grąžintų objekto gylį(kiek giliausiai objektas turi įdėtinius objektus).
 console.log(`\n---- 3 užduotis----\n`);
 const obj = {
@@ -186,9 +198,7 @@ function arrReverse(arr) {
     return arrReversed;
 }
 
-
 console.log(`Verčiamas masyvas: ${arr.join(', ')}.\nAtvirkščias masyvas: ${arrReverse(arr).join(', ')}.`);
-
 
 // 5. Raktų Filtravimas Objekte: Turite objektą su daugybe savybių.Sukurkite funkciją, kuri naudojant for in ciklą, grąžina naują objektą, kuriame yra tik tas savybės, kurios tenkina tam tikrą sąlygą.
 console.log(`\n---- 5 užduotis----\n`);
@@ -261,15 +271,76 @@ function countingTypes(arr) {
 
 console.log(countingTypes(mixedArr));
 
-
 // 8. Objekto Konversija Į Masyvą: Sukurkite funkciją, kuri objektą(raktai ir reikšmės) konvertuotų į masyvą, kur kiekvienas elementas būtų[raktas, reikšmė] pora.
 console.log(`\n---- 8 užduotis----\n`);
 
+const cityData2 = {
+    "Austin": 964254,
+    "Charlotte": 885708,
+    "Chicago": 2693976,
+    "Columbus": 879170,
+    "Dallas": 1343573,
+    "Denver": 727211,
+    "Fort Worth": 895008,
+    "Houston": 2320268
+};
+
+function fromObjToArr(obj) {
+    const arr = [];
+    for (let key in obj) {
+        arr.push([key, obj[key]])
+    }
+    return arr
+}
+
+console.log(fromObjToArr(cityData2));
 
 // 9. Dinaminis Objekto Sudarymas: Naudodami for ciklą, sukurti objektą, kurio raktai yra skaičiai nuo 1 iki n, o reikšmės - tie skaičiai pakelti kvadratu.
 console.log(`\n---- 9 užduotis----\n`);
 
+function createObj(n) {
+    const newObj = {};
+    for (let i = 1; i <= n; i++) {
+        newObj[i] = i ** 2;
+    }
+    return newObj;
+}
+
+console.log(createObj(6));
 
 // 10. Sąlyginės Reikšmės Objekte: Turite objektą, kuriame saugomos įvairios vartotojų savybės(pvz., vardas, amžius, miestas).Sukurkite funkciją, kuri naudojant for in ciklą, pakeistų tam tikrų savybių reikšmes, jeigu jos tenkina nurodytą sąlygą(pvz., jeigu vartotojo amžius yra mažesnis nei 18, pridėkite savybę pilnametis: false).
 console.log(`\n---- 10 užduotis----\n`);
 
+const users = {
+    jonas: {
+        name: 'Jonas',
+        age: 40,
+        city: 'Vilnius'
+    },
+    petras: {
+        name: 'Petras',
+        age: 12,
+        city: 'Kaunas'
+    },
+    ona: {
+        name: 'Ona',
+        age: 23,
+        city: 'Alytus'
+    },
+    maryte: {
+        name: 'Maryte',
+        age: 17,
+        city: 'Utena'
+    }
+}
+
+function isAdultFalse(obj) {
+    for (let key in obj) {
+        if (obj[key].age < 18) {
+            obj[key].adult = false;
+        }
+    }
+    return obj;
+}
+
+console.log(isAdultFalse(users));
