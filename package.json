@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "objectsHW2": "node --watch ./homework/objectsHW2.js",
     "objectsHW": "node --watch ./homework/objectsHW.js",
     "codewars2": "node --watch ./homework/codewars2.js",
     "functionHW": "node --watch ./homework/functionHW.js",
