@@ -47,9 +47,13 @@
     "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "echo \"Error: no test2 specified\" && exit 1"
+    "test2": "echo \"Error: no test2 specified\" && exit 1",
+    "dev": "dead-server --host=localhost --port=4903"
   },
   "keywords": [],
   "author": "AgneKal (https://github.com/AgneKal)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "dead-server": "^1.0.9"
+  }
 }
